@@ -14,9 +14,24 @@ const style = {
 function App() {
   return (
     <div className={style.bg}>
-      <h1>Working with firebase</h1>
+      <div className={style.container}>
+        <h3 className={style.heading}>Todo App</h3>
+        <form onSubmit={createTodo} className={style.form}>
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className={style.input}
+            type='text'
+            placeholder='Add Todo'
+          />
+          <button className={style.button}>
+            <AiOutlinePlus size={30} />
+          </button>
+        </form>
+        <ul>
+         </ul>
+      </div>
     </div>
   );
 }
-
 export default App;
